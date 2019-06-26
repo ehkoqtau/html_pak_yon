@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../style.css" >
+<link href="../prism.css" rel="stylesheet" />
+<title>Belajar Jaringan - STIKOM Muhammadiyah</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img class="imgheader" src="../img/stikom.jpg"> 
+        <div class="head1">STIKOM Muhammadiyah Batam</div> 
+        <div class="head2">Tempat kamu yang ingin belajar</div> 
+    </header> 
+      
+    <!-- Menu Navigation Bar -->
+    <div class="menu"> 
+        <a href="../index.html">Beranda</a> 
+        <a href="../tentang.html">Tentang</a> 
+        <a href="../hubungi.html">Hubungi</a>
+        <div class="menu-log"> 
+            <a href="../index.html">STIKOM</a> 
+        </div> 
+    </div> 
+
+    <ul class="side">
+      <li class="liside"><a href="../robotik.html">Robotik</a></li>
+      <li class="liside"><a class="active" href="../jaringan.html">Jaringan</a></li>
+      <li class="liside"><a href="../web.html">Web</a></li>
+    </ul>  
+
+<div class="card">
+  <img src="../img/jaringan/subnetmask.png" height="400px"class="card-img-top">
+  <div class="card-body">
+    <h1 class="card-title">Mengenal Apa Itu Subnet Mask</h1>
+    <hr>
+    <p class="card-text">Subnet mask adalah istilah teknologi Informasi yang membedakan Network ID dan Host ID atau sebagai penentu porsi Network ID dan Host ID pada deretan kode biner. Fungsi dari subnet mask sendiri adalah untuk membedakan Network ID dengan Host ID dan menentukan alamat tujuan paket data apakah local atau remote.</p>
+    <p class="card-text">Apa itu Network ID dan Host ID ? Network ID adalah bagian dari IP Address yg berfungsi untuk menunjukan di jaringan mana komputer atau device tersebut berada, sedangkan Host ID menunjukan server, router, workstation, dan host TCP/IP lainnya yang berada di dalam jaringan tersebut. Terdapat 2 cara untuk mempresentasikan Subnet mask yaitu dengan cara notasi desimal bertitik dan notasi panjang prefix.</p>
+    <p class="card-text">Pengekspresian sebuah subnet mask biasanya di dalam dotted decimal notaion (notasi desimal bertitik). Sama halnnya seperti alamat IP. Setelah semua bit di set sebagai bagian Network ID dan Host ID, hasil nilai 32 bit tersebut dikonversikan menjadi notasi desimal bertitik.walaupun cara mempresentasikannya sebagai notasi desimal bertitik, subnet mask bukanlah alamat IP. Kelas – kelas alamat IP menjadi sebuah dasar dibuat nya Subnet Mask Default. Berikut beberapa data subnet mask default dengan menggunakan notasi desimal bertitik :</p>
+    <p class="card-text"><ul>
+        <li>Kelas alamat : Kelas A
+            <br>Subnet Mask (biner) : 11111111.00000000.00000000.00000000
+            <br>Subnet Mask (desimal) : 255.0.0.0
+        </li>
+        <br>
+        <li>Kelas alamat : Kelas B
+            <br>Subnet Mask (biner) : 11111111.11111111.00000000.00000000
+            <br>Subnet Mask (desimal) : 255.255.0.0
+        </li>
+        <br>
+        <li>Kelas alamat : Kelas C
+            <br>Subnet Mask (biner) : 11111111.11111111.11111111.00000000
+            <br>Subnet Mask (desimal) : 255.255.255.0
+        </li>
+    </ul></p>
+    <p class="card-text">Subnet mask sama seperti prefix, apa itu prefix ? prefix adalah penunjuk banyak bit dari sebuah IP Address yang merupakan porsi Network ID. Notasi network prefix juga dikenal dengan sebutan notasi Classless Inter-Domain Routing (CIDR). Nilai – nilai bit yang ada di subnet mask didefinisikan oleh RFC 950 sebagai berikut:</p>
+    <p class="card-text">
+        <ul>
+            <li>Semua bit yang ditujukan agar digunakan oleh network identifier diset ke nilai 1</li>
+            <li>Semua bit yang ditujukan agar digunakan oleh host identifier diset ke nilai 0</li>
+        </ul>
+    </p>
+    <p class="card-text">Dan berikut adalah format penggunaan network prefix :</p>
+    <p class="card-text"><ul>
+        <li>Kelas alamat : Kelas A
+            <br>Subnet Mask (biner) : 11111111.00000000.00000000.00000000
+            <br>Subnet Mask (desimal) : 255.0.0.0
+            <br>Prefix length : /8
+        </li>
+        <br>
+        <li>Kelas alamat : Kelas B
+            <br>Subnet Mask (biner) : 11111111.11111111.00000000.00000000
+            <br>Subnet Mask (desimal) : 255.255.0.0
+            <br>Prefix length : /16
+        </li>
+        <br>
+        <li>Kelas alamat : Kelas C
+            <br>Subnet Mask (biner) : 11111111.11111111.11111111.00000000
+            <br>Subnet Mask (desimal) : 255.255.255.0
+            <br>Prefix length : /24
+        </li>
+    </ul></p>
+
+    <p class="card-text">Sebuah jaringan yang menggunakan TCP/IP setiap host didalamnya memerlukan subnet mask meskipun didalam sebuah jaringan dengan satu segmen saja. Subnet mask tersebut harus dikonfigurasikan di dalam setiap node TCP/IP baik itu subnet mask default atau subnet mask yang dikostumisasi.</p>
+    <p class="card-text"><strong>Contoh :</strong></p>
+    <p class="card-text">11000000.10101000.00000100.<strong>00000001</strong>=192.168.4.1/24<br>
+Network ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Host ID</strong><br>
+IP Address &nbsp; &nbsp; = 11000000.10101000.00000100.<strong>00000001</strong><br>
+Subnet Mask = 11111111.11111111.11111111. <strong>00000000</strong><br>
+= 255.255.255.0 (dalam desimal)</p>
+    <p class="card-text">Maka subnet mask dari IP address yg berprefix /24 adalah 255.255.255.0</p>
+
+
+    <div class="card-footer bg-transparent border-success"><footer class="blockquote-footer">14 April 2019 - <cite title="Source Title">Eko Setiawan</cite></footer></div>
+  </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer class="footer_web">@ehkoqtau &copy; 2019</footer> 
+<script src="../prism.js"></script>
+</body>
+</html> 

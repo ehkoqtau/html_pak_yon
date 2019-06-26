@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../style.css" >
+<link href="../prism.css" rel="stylesheet" />
+<title>Belajar Jaringan - STIKOM Muhammadiyah</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img class="imgheader" src="../img/stikom.jpg"> 
+        <div class="head1">STIKOM Muhammadiyah Batam</div> 
+        <div class="head2">Tempat kamu yang ingin belajar</div> 
+    </header> 
+      
+    <!-- Menu Navigation Bar -->
+    <div class="menu"> 
+        <a href="../index.html">Beranda</a> 
+        <a href="../tentang.html">Tentang</a> 
+        <a href="../hubungi.html">Hubungi</a>
+        <div class="menu-log"> 
+            <a href="../index.html">STIKOM</a> 
+        </div> 
+    </div> 
+
+    <ul class="side">
+      <li class="liside"><a href="../robotik.html">Robotik</a></li>
+      <li class="liside"><a class="active" href="../jaringan.html">Jaringan</a></li>
+      <li class="liside"><a href="../web.html">Web</a></li>
+    </ul>  
+
+<div class="card">
+  <img src="../img/jaringan/ipv4.png" height="400px"class="card-img-top">
+  <div class="card-body">
+    <h1 class="card-title">Apa itu IP Address versi 4 (IPv4)?</h1>
+    <hr>
+    <p class="card-text">Setelah Anda membaca artikel Fungsi IP Address kali ini kita akan membahas khusus mengenai IP addres versi 4 (IPv4). Sebenarnya apa itu IPv4? IPv4 adalah jenis pengalamatan jaringan yang digunakan dalam protokol TCP/IP dengan panjang 32bit dengan jumlah total hostnya adalah 4 milyar tepatnya adalah 4.294.967.296 host yang tersebar di seluruh dunia. Dari mana angka 4 milyar tersebut? angka tersebut didapatkan dari 256 atau 8 bit (antara 0-256) dipangkatkan dengan 4 (karena ada 4 oktet) maka nilai maksimal dari ip v4 adalah 255.255.255.255 maka 256x256x256x256=4.294.967.296 host. Namun saat ini sudah beredar bahwa Ipv4 ini akan habis maka dikembangkanlah ipv6.</p>
+    <p class="card-text">contoh IPv4 ini adalah:</p>
+    <p class="card-text"><strong>192.168.0.100</strong></p>
+    <p class="card-text"><strong>10.234.94.10</strong></p>
+    <p class="card-text"><strong>172.15.14.1</strong></p>
+    <h2 class="card-title">PENGALAMATAN IPV4</h2>
+    <p class="card-text text-center"><img src="../img/jaringan/ipv4_1.png" align="center"></p>
+    <p class="card-text">Pada gambar diatas dapat terlihat, bahwa penulisan ipv4 ini adalah dalam notasi titik, yang dibagi menjadi 4 oktet yang berukuran 8 bit. Alamat IP yang dimiliki oleh host dapat dibagi atau dikelompokkan dengan menggunakan subnet mask yang berbeda, yaitu:</p>
+    <h2 class="card-title">JENIS ALAMAT IP ADDRESS</h2>
+    <p class="card-text">Berdasarkan jenis Alamatnya, IPv4 dapat dibagi menjadi 3 bagian, yaitu:</p>
+    <p class="card-text"><ul>
+        <li><b>Alamat Unicast</b>,<br>
+        antarmuka jaringan yang dihubungkan ke sebuah Jaringan Internal atau disebut dengan internetwork. Unicast dapat dimanfaatkan dalam komunikasi Point to Point atau satu ke satu. Jika pada suatu instansi tidak terkoneksi ke internet, maka semua ruang kelas alamat pada unicast dapat digunakan. Jika terkoneksi dengan internet yang terhubung ke router, maka alamat yang dapat digunakan adalah 2 jenis yaitu Public Address dan Private Address.</li>
+        <li><b>Alamat Multicast</b>,<br>
+        alamat yang dapat digunakan untuk menyampaikan satu paket untuk banyak penerima. Sebuah paket yang ditujukan ke suatu alamat multicast akan diteruskan oleh router ke subjaringan yang sedang berada dalam kondisi listening. Dengan cara multicast ini, akan lebih efisien untuk mengirimkan paket data. Untuk menggunakan sistem multicast, Anda dapat menggunakan IpV4 kelas D yaitu 224.0.0.0/4.</li>
+        <li><b>Alamat Broadcast</b>,<br>
+        digunakan untuk menyampaikan paket data secara satu untuk semua. Jika host mengirimkan paket data dengan tujuan broadcast, maka semua host yang ada dalam segment tersebut akan menerima paket yang dikirim dan segera memprosesnya. Perbedaan dengan unicast dan multicast adalah ip broadcast hanya dapat digunakan sebagai alamat tujuan, tidak dapat digunakan sebagai alamat sumber.<br>
+        Ada 4 jenis dalam broadcast ini, yaitu Network, subnet, all subnet directed dan limited broadcast. Pada setiap jenis alamat tersebut, paket ip dialamatkan kepada lapisan antarmuka jaringan.&nbsp;Sebagai contoh, jaringan Ethernet semua paket broadcast IP akan dikirimkan ke alamat broadcast Ethernet yakni 0xFF-FF-FF-FF-FF-FF.</li>
+        </ul></p>
+
+    <h2 class="card-title">KELAS ALAMAT IP ADDRESS</h2>
+    <p class="card-text">Berdasarkan kelasnya, IPv4 dapat dikelompokkan menjadi 5 kelas, yaitu:</p>
+    <p class="card-text"><ul>
+<li>Kelas A (1–126) alamat ini digunakan dalam skala besar.<br>
+Format yang digunakan: 0nnnnnnn.hhhhhhhh.hhhhhhhh.hhhhhhhh. Pada Alamat IP kelas A mempunyai Bit pertama dengan nilai : 0. Panjang suatu Network ID yang dimiliki alamat ip kelas A adalah : 8 bit. Alamat IP kelas A memiliki Panjang sebuah Host ID adalah : 24 bit. Nilai Byte pertama pada alamat IP kelas A adalah : 0 s/d 127<br>
+Rangkaian Range IP Pada kelas A bisa di contohkan seperti berikut ini : 1.165.2.5 sampai 126.139.0.7. Kelas A mempunyai Jumlah IP sebanyak: 16.777.214 IP address pada stiap bagiannya pada kelas A</li>
+<li>Kelas B (128–191) digunakan skala besar maupun menengah<br>
+Format yang digunakan: 10nnnnnn.nnnnnnnn.hhhhhhhh.hhhhhhhh. Pada Alamat IP kelas B mempunyai Bit pertama dengan nilai : 10. Panjang suatu Network ID yang dimiliki alamat ip kelas B adalah : 16 bit. Alamat IP kelas B memiliki Panjang sebuah Host ID adalah : 16 bit. Nilai Byte pertama pada alamat IP kelas A adalah : 128 s/d 191<br>
+Rangkaian Range IP Pada kelas B bisa di contohkan seperti berikut ini : 128.130.3.2 sampai 191.145.5.4. Kelas A mempunyai Jumlah IP sebanyak: 65.535 IP address pada stiap bagiannya pada kelas B</li>
+<li>Kelas C (192-223) jaringan skala kecil<br>
+Format yang digunakan: 110nnnnn.nnnnnnnn.nnnnnnnn.hhhhhhhh. Pada Alamat IP kelas C mempunyai 3 Bit pertama dengan nilai : 110. Panjang suatu Network ID yang dimiliki alamat ip kelas C adalah : 24 bit. Alamat IP kelas C memiliki Panjang sebuah Host ID adalah : 8 bit. Nilai Byte pertama pada alamat IP kelas C adalah : 192 s/d 223<br>
+Rangkaian Range IP Pada kelas C bisa di contohkan seperti berikut ini : 192.168.2.15 sampai 223.168.5.9. Kelas C mempunyai Jumlah IP sebanyak: 254 IP address pada stiap bagiannya pada kelas C</li>
+<li>Kelas D (224-239) multicast<br>
+Pada IP Address yang memiliki tipe kelas D ini, tujuan awalnya memang diperuntukkan pada multicasting, kelas ini juga tidak lagi dilakukan pembahasan mengenai masalah netid dan hostidnya. pada kelas D ini memiliki jumlah pada 4 bit pertamanya dengan nilai 1110, jadi sudah bisa ditafsirkan jika byte pertama pada kelas D ini berkisar pada angka 224 s/d 247 4. Bit Pertama yang dimiliki kelas D adalah : 1110<br>
+Jumlah Range yang dimiliki kelas D ini dimulai dengan nilai : 224 – 247</li>
+<li>Kelas E (240-255) reservasi, biasanya digunakan untuk eksperiment</li>
+</ul></p>
+
+    <div class="card-footer bg-transparent border-success"><footer class="blockquote-footer">14 April 2019 - <cite title="Source Title">Eko Setiawan</cite></footer></div>
+  </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer class="footer_web">@ehkoqtau &copy; 2019</footer> 
+<script src="../prism.js"></script>
+</body>
+</html> 

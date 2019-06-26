@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../style.css" >
+<link href="../prism.css" rel="stylesheet" />
+<title>Belajar Web - STIKOM Muhammadiyah</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img class="imgheader" src="../img/stikom.jpg"> 
+        <div class="head1">STIKOM Muhammadiyah Batam</div> 
+        <div class="head2">Tempat kamu yang ingin belajar</div> 
+    </header> 
+      
+    <!-- Menu Navigation Bar -->
+    <div class="menu"> 
+        <a href="../index.html">Beranda</a> 
+        <a href="../tentang.html">Tentang</a> 
+        <a href="../hubungi.html">Hubungi</a>
+        <div class="menu-log"> 
+            <a href="../index.html">STIKOM</a> 
+        </div> 
+    </div> 
+
+    <ul class="side">
+      <li class="liside"><a href="../robotik.html">Robotik</a></li>
+      <li class="liside"><a href="../jaringan.html">Jaringan</a></li>
+      <li class="liside"><a class="active" href="../web.html">Web</a></li>
+    </ul>  
+
+<div class="card">
+  <img src="../img/web/layout_html.png" height="400px"class="card-img-top">
+  <div class="card-body">
+    <h1 class="card-title">Membuat layout WEB responsive sederhana HTML dan CSS</h1>
+    <hr>
+    <p class="card-text">Dalam artikel ini admin akan membuat tutorial sederhana bagaimana cara Membuat layout WEB responsive sederhana dengan menggunakan HTML dan CSS. Oke, langsung saja ke langkah yang pertama yaitu dengan mem buat folder baru dan beri nama responsiveLayout.</p><h2 class="card-title">Membuat file index</h2>
+    <p class="card-text">
+        <ul>
+            <li>Buat file baru dengan nama&nbsp;<strong>index.html&nbsp;</strong>kemudian simpan di dalam folder <strong>responsiveLayout</strong></li>
+            <li>Isikan source code berikut dalam file <strong>index.html&nbsp;</strong>
+            <pre><code class="language-markup line-numbers">
+    &lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>Membuat layout WEB responsive sederhana HTML dan CSS&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css">
+&lt;/head>
+&lt;body>
+&lt;div class="header">
+  &lt;h2>header&lt;/h2>
+&lt;/div>
+
+&lt;div class="nav">
+  &lt;a href="#">menu 1&lt;/a>
+  &lt;a href="#">menu 2&lt;/a>
+  &lt;a href="#">menu 3&lt;/a>  
+&lt;/div>
+
+&lt;div class="row">
+  &lt;div class="content">
+    &lt;div class="card">
+      &lt;h2>Judul artikel&lt;/h2>
+      &lt;h5>Rabu, 22 Februari 2018&lt;/h5>
+      &lt;div class="img" style="height:200px;">Image&lt;/div>     
+      &lt;p>Deskripsi deskripsi&lt;/p>
+    &lt;/div>    
+  &lt;/div>
+  &lt;div class="sidebar">
+    &lt;div class="widget">
+      &lt;h2>Widget 1&lt;/h2>
+    &lt;/div>
+    &lt;div class="widget">
+      &lt;h2>Widget 2&lt;/h2>
+    &lt;/div>
+    &lt;div class="widget">
+      &lt;h2>Widget 3&lt;/h2>
+    &lt;/div>
+    &lt;div class="widget">
+      &lt;h2>Widget 4&lt;/h2>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+
+&lt;div class="row">
+    &lt;div class="footer">
+        &lt;h2>Footer 1&lt;/h2>         
+    &lt;/div>
+    &lt;div class="footer">
+        &lt;h2>Footer 2&lt;/h2>
+    &lt;/div>
+    &lt;div class="footer">
+        &lt;h2>Footer 3&lt;/h2>
+    &lt;/div>
+    &lt;div class="footer">
+        &lt;h2>Footer 4&lt;/h2>
+    &lt;/div>
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+    </code></pre></li>
+    </p>
+    <h2 class="card-title">Membuat file CSS</h2>
+    <p class="card-text">
+        <ul>
+            <li>Buat file baru dengan nama <strong>style.css&nbsp;</strong>kemudian simpan di dalam folder <strong>responsiveLayout</strong></li>
+            <li>Isikan source code berikut dalam file <strong>style.css&nbsp;</strong>
+            <pre><code class="language-css line-numbers">
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.header {
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {   
+    float: left;
+    width: 75%;
+}
+
+.sidebar {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 10px;
+}
+
+.img {
+    background-color: #aaa;
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+     background-color: white;
+     padding: 10px;
+     margin-top: 10px;
+}
+.widget{
+     background-color: white;
+     padding: 10px;
+     margin-top: 10px;   
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 10px;
+    width: 25%;
+    text-align: center;
+    background: white;
+    margin-top: 20px;
+    display: inline-block;
+    float: left;    
+}
+
+
+@media (max-width: 800px) {
+    .content, .sidebar,.footer{   
+        width: 100%;
+        padding: 0;
+    }     
+}
+
+@media (max-width: 400px) {
+    .nav a {
+        float: none;
+        width:100%;
+    }
+}
+    </code></pre></li>
+    </p>
+    <p class="card-text">Untuk Melihat hasilnya yaitu dengan cara buka file index.html di browser seperti Mozilla Firefox,Google Chrome dan lain sebagainya.</p>
+
+    <div class="card-footer bg-transparent border-success"><footer class="blockquote-footer">15 April 2019 - <cite title="Source Title">Eko Setiawan</cite></footer></div>
+  </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer class="footer_web">@ehkoqtau &copy; 2019</footer> 
+<script src="../prism.js"></script>
+</body>
+</html> 
